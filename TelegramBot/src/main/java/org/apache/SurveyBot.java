@@ -510,45 +510,4 @@ public class SurveyBot extends TelegramLongPollingBot {
     }
 }
 
-    /*private void createSurvey(Long chatId, String command) {
-        checkAndCleanUpSurveys(); // לנקות סקרים ישנים
-
-        if (communityMembers.size() < 1) {
-            sendMessage(chatId, "לא ניתן ליצור סקר, נדרשים לפחות 3 חברים בקהילה.");
-            return;
-        }
-
-        if (activeSurveys.containsKey(chatId)) {
-            sendMessage(chatId, "כבר קיים סקר פעיל, יש להמתין לסיומו.");
-            return;
-        }
-
-        String[] parts = command.split(";", 3);
-        if (parts.length < 3) {
-            sendMessage(chatId, "שגיאה בפקודה, אנא בדוק את הפורמט.");
-            return;
-        }
-
-        String question = parts[1];
-        String[] options = parts[2].split(",");
-
-        if (options.length < 2 || options.length > 4) {
-            sendMessage(chatId, "יש לבחור בין 2 ל-4 אפשרויות תשובה.");
-            return;
-        }
-
-        Survey survey = new Survey(question, Arrays.asList(options), chatId);
-        activeSurveys.put(chatId, survey);
-        survey.setStartTime(new Date());
-
-        sendSurveyToTheCrowd(survey);
-
-        //broadcastMessage("סקר חדש נוצר: " + question);
-       // broadcastMessage("אפשרויות: " + String.join(", ", options));
-
-
-
-        checkIfTheSurveyTimesOut(survey);
-    }*/
-
 
