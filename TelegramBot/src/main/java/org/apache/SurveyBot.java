@@ -16,7 +16,7 @@ public class SurveyBot extends TelegramLongPollingBot {
 
     private Map<Long, List<String>> communityMembers = new HashMap<>();
     //private Map<Long, Survey> activeSurveys = new HashMap<>();
-    private static final String FILE_PATH = "src\\main\\java\\org\\apache\\chatIds.txt";
+    private static final String FILE_PATH = "TelegramBot\\src\\main\\java\\org\\apache\\chatIds.txt";
     private Set<Long> userIds = new HashSet<>();
     private Map<Long, Boolean>have_we_already_sent_a_start_message = new HashMap<>();
 
